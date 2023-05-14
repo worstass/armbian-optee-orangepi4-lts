@@ -1,0 +1,24 @@
+From 6c9f78d675844530866f11b1f542faf3fef8a4dc Mon Sep 17 00:00:00 2001
+From: nobody <nobody@nowhere.com>
+Date: Sun, 14 May 2023 20:33:43 +0800
+Subject: [PATCH] set default SPD to opteed
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 73007b413..c9d6c6218 100644
+--- a/Makefile
++++ b/Makefile
+@@ -507,7 +507,7 @@ SPDS			:=	$(sort $(filter-out none, $(patsubst services/spd/%,%,$(wildcard servi
+ # Platforms providing their own TBB makefile may override this value
+ INCLUDE_TBBR_MK		:=	1
+ 
+-
++SPD = opteed
+ ################################################################################
+ # Include SPD Makefile if one has been specified
+ ################################################################################
+-- 
+2.39.2 (Apple Git-143)
