@@ -39,8 +39,9 @@ function build_custom_uboot__with_optee() {
 
     cd "$uboot_work_dir" || exit
     display_alert "Copy optee bin to uboot src dir" "" "info"
-    run_host_command_logged cp -pv "${opteeosdir}/out/arm/core"/*.bin "${opteeosdir}/out/arm/core"/*.elf ./
+    #run_host_command_logged cp -pv "${opteeosdir}/out/arm/core"/*.bin "${opteeosdir}/out/arm/core"/*.elf ./
 
+    #UBOOT_TARGET_MAP="BL31=bl31.elf idbloader.img u-boot.itb;;idbloader.img u-boot.itb"
     UBOOT_TARGET_MAP="BL31=bl31.elf TEE=tee.elf all;;idbloader.img u-boot.itb"
     loop_over_uboot_targets_and_do compile_uboot_target
 }

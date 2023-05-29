@@ -1,0 +1,11 @@
+--- a/configs/orangepi-4-rk3399_defconfig
++++ b/configs/orangepi-4-rk3399_defconfig
+@@ -77,3 +77,8 @@
+ CONFIG_DISPLAY_ROCKCHIP_HDMI=y
+ CONFIG_SPL_TINY_MEMSET=y
+ CONFIG_ERRNO_STR=y
++
++CONFIG_TEE=y
++CONFIG_OPTEE=y
++CONFIG_OPTEE_SERVICE_DISCOVERY=y
++CONFIG_OPTEE_LIB=y
